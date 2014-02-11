@@ -1,0 +1,12 @@
+
+var button = document.getElementById("kate");
+
+
+function Search(){
+	alert();
+	var searchTerm;
+	searchTerm = document.getElementById("searchTerm").value;
+	var newURL = "http://www.reddit.com/search?q="+searchTerm;
+	chrome.tabs.create({url: newURL});
+}
+button.onsubmit=function(){Search()};
